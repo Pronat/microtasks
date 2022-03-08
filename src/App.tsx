@@ -5,11 +5,11 @@ import {NewComponents} from "./components/NewComponents";
 
 function App() {
 
-    // const topCars = [
-    //     {manufacturer:'BMW', model:'m5cs'},
-    //     {manufacturer:'Mercedes', model:'e63s'},
-    //     {manufacturer:'Audi', model:'rs6'}
-    // ]
+    const topCars = [
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'}
+    ]
 
     // const [students, setStudents] = useState ( [
     const students = [
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-     <NewComponents students={students} />
+     <NewComponents topCars={topCars} />
     </div>
   );
 }
