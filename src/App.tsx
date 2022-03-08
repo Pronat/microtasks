@@ -24,6 +24,7 @@ function App() {
         {id: 9, name: "Thomas", age: 88},
         {id: 10, name: "Charles", age: 98},
         {id: 11, name: "Christopher", age: 100},
+
     ]
 
   return (
