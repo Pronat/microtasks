@@ -1,7 +1,8 @@
 import React from 'react';
 
 type NewComponentsType = {
-    students:Array<StudentType>
+    // students:Array<StudentType>;
+    students:StudentType[];
 }
 type StudentType = {
     id: number,
@@ -12,7 +13,18 @@ type StudentType = {
 export const NewComponents = (props: NewComponentsType) => {
     return (
         <div>
-            new component
+            <ul>
+                {props.students.map((objectFromStudentArray, index) => {
+                    return (
+                        //т.к. выше мы уже зашли в props.students
+                <li key={objectFromStudentArray.id}>
+                    <span>{objectFromStudentArray.name}</span>
+                    <span>{objectFromStudentArray.age}</span>
+                    </li>     //выводим name и age
+
+                )
+                })}
+            </ul>
         </div>
     );
 };
