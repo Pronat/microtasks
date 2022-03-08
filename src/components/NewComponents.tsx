@@ -1,7 +1,12 @@
 import React from 'react';
 
 type NewComponentsType = {
-    students:any
+    students:Array<StudentType>
+}
+type StudentType = {
+    id: number,
+    name: string,
+    age: number
 }
 
 export const NewComponents = (props: NewComponentsType) => {
