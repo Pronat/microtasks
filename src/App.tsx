@@ -5,7 +5,7 @@ import {Button} from "./components/Button";
 
 function App() {
     const Button1Foo = (subscriber:string,age:number, address:string) => {
-        console.log(subscriber, age)
+        console.log(subscriber, age, address)
     }
     const Button2Foo = (subscriber:string,age:number) => {
         console.log(subscriber, age)
