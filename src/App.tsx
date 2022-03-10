@@ -12,18 +12,24 @@ function App() {
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
+
+    let currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS')
+
     return (
-        <ul>
-            {money.map((objFromMoneyArray) => {
-                return (
-                    <li>
-                        <span>{objFromMoneyArray.banknots}</span>
-                        <span>{objFromMoneyArray.value}</span>
-                        <span>{objFromMoneyArray.number}</span>
-                    </li>
-                )
-            })}
-        </ul>
+        <>
+            <ul>
+                {currentMoney.map((objFromMoneyArray, index) => {
+                    return (
+                        <li key={index}>
+                            <span>{objFromMoneyArray.banknots}</span>
+                            <span>{objFromMoneyArray.value}</span>
+                            <span>{objFromMoneyArray.number}</span>
+                        </li>
+                    )
+                })}
+            </ul>
+        </>
     );
 }
-    export default App;
+
+export default App;
