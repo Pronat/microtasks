@@ -13,7 +13,22 @@ function App() {
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
 
-    let currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS')
+    let currentMoney = money;      //по умолчание равно всем значениям
+    //если nameButton==='dollar'
+    if (nameButton === 'dollar') {
+    currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'dollar');
+    }
+    //если nameButton==='RUBLS'
+    if (nameButton === 'RUBLS') {
+        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS');
+    }
+
+
+
+
+    const onClickFilterHandler = (nameButton: string) => {
+        console.log(nameButton)
+    }
 
     return (
         <>
@@ -28,6 +43,11 @@ function App() {
                     )
                 })}
             </ul>
+            <div style={{marginLeft: '35px'}}>
+                <button onClick={() => onClickFilterHandler('all')}>all</button>
+                <button onClick={() => onClickFilterHandler('Rubls')}>Rubls</button>
+                <button onClick={() => onClickFilterHandler('Dollars')}>Dollars</button>
+            </div>
         </>
     );
 }
