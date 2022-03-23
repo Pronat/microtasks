@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import FullInput from "./components/FullInput";
+
 
 function App() {
     let [message, setMessage] = useState([
@@ -7,18 +9,25 @@ function App() {
         {message: 'message3'},
     ])
 
+    const addMessage = (title: string) => {
+        let newMessage = {message: title};
+        setMessage([newMessage, ...message,])
+    }
+
     return (
-       <div className={"App"}>
-           <div>
-               <input/>
-               <button>+</button>
-           </div>
-           {message.map((el, index) => {
-           return(
-               <div key={index}>{el.message}</div>
-           )
-       })}
-       </div>
+        <div className={"App"}>
+            <FullInput addMessage={addMessage}/>
+
+            {/*<div>*/}
+            {/*    <input/>*/}
+            {/*    <button>+</button>*/}
+            {/*</div>*/}
+            {message.map((el, index) => {
+                return (
+                    <div key={index}>{el.message}</div>
+                )
+            })}
+        </div>
     );
 }
 
