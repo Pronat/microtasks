@@ -18,13 +18,9 @@ function App() {
 
     return (
         <div className={"App"}>
-            {/*<div>*/}
-            {/*    <input/>*/}
-            {/*    <button>+</button>*/}
-            {/*</div>*/}
 
             <Input />
-            <Button />
+            <Button name={'+'} callBack={()=>{}} />
 
             {message.map((el, index) => {
                 return (
