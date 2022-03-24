@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import FullInput from "./components/FullInput";
+import {Input} from "./components/Input";
+import {Button} from "./components/Button";
 
 
 function App() {
@@ -16,12 +18,14 @@ function App() {
 
     return (
         <div className={"App"}>
-            <FullInput addMessage={addMessage}/>
-
             {/*<div>*/}
             {/*    <input/>*/}
             {/*    <button>+</button>*/}
             {/*</div>*/}
+
+            <Input />
+            <Button />
+
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>
