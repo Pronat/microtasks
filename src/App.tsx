@@ -41,33 +41,7 @@ function App() {
                 newMoney={newMoney}
                 showMeHandler={showMeHandler}
             />
-            // <div className={"App"}>
-            //     <div>
-            //         {
-            //             newMoney.map((el, index) => {
-            //                 return (
-            //                     <div key={index}>
-            //                         <span>{el.value} </span>
-            //                         <span>{el.banknots}</span>
-            //                         <span>{el.number} </span>
-            //                     </div>
-            //
-            //                 )
-            //             })
-            //         }
-            //     </div>
-            //     <Button title={'all'} callBack={() => {
-            //         showMeHandler('all')
-            //     }}/>
-            //     <Button title={'Dollars'} callBack={() => {
-            //         showMeHandler('Dollars')
-            //     }}/>
-            //     <Button title={'RUBLS'} callBack={() => {
-            //         showMeHandler('RUBLS')
-            //     }}/>
-            //
-            //
-            // </div>
+
         );
     }
     export default App;
