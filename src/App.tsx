@@ -16,18 +16,16 @@ function App() {
     ])
 
     const showMeHandler = (title: string) => {
-        let cash = money.filter((el)=> el.banknots === title)
-        if (cash) {
-            return cash
+         const money2 = money.filter((el)=> el.banknots === title)
+        if (money2) {
+            console.log(money2)
         }
-
     }
 
     return (
         <div className={"App"}>
-            <Button title={'Dollars'} callBack={()=>{showMeHandler}}/>
-            <Button title={'RUBLS'}/>
-
+            <Button title={'Dollars'} callBack={()=>{showMeHandler('Dollars')}}/>
+            <Button title={'RUBLS'} callBack={()=>{showMeHandler('RUBLS')}}/>
         </div>
     );
 }
