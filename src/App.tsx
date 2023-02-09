@@ -16,7 +16,7 @@ function App() {
                 console.log('Hello')
             }}>click
             </button>
-            <button onClick={HelloKolya}>button2</button>
+            <button onClick={() => {HelloKolya('Kolya')}}>button2</button>
         </div>
     );
 }
