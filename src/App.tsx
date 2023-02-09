@@ -16,13 +16,13 @@ function App() {
     ])
 
     const showMeHandler = (currency: string) => {
-        console.log(`Sow me ${currency}`)
+        console.log(`Show me ${currency}`)
     }
 
     return (
         <div className={"App"}>
-            <Button title={()=>{showMeHandler('Dollars')}}/>
-            <Button title={()=>{showMeHandler('RUBLS')}}/>
+            <Button title={'Dollars'}/>
+            <Button title={'RUBLS'}/>
 
         </div>
     );
