@@ -26,7 +26,7 @@ function App() {
             {/*</button>*/}
             {/*<button onClick={() => {HelloKolya('Kolya')}}>button2</button>*/}
             <button onClick={button1}>1</button>
-            <button onClick={()=>{button2('Button2')}}>2</button>
+            <button onClick={()=>{button2('Button number 2')}}>2</button>
 
         </div>
     );
