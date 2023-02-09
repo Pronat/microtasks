@@ -22,10 +22,22 @@ function App() {
         }
     }
 
+    let [number, setNumber] = useState(0)
+    const add1Handler = () => {
+        setNumber(++number)
+    }
+    const set0Handler = () => {
+        setNumber(0)
+    }
+
     return (
         <div className={"App"}>
             <Button title={'Dollars'} callBack={()=>{showMeHandler('Dollars')}}/>
             <Button title={'RUBLS'} callBack={()=>{showMeHandler('RUBLS')}}/>
+
+            <button onClick={add1Handler}>add 1</button>
+            <button onClick={set0Handler}>set 0</button>
+            <div>{number}</div>
         </div>
     );
 }
