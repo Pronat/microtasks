@@ -15,13 +15,17 @@ function App() {
         { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
     ])
 
-    const showMeHandler = (currency: string) => {
-        console.log(`Show me ${currency}`)
+    const showMeHandler = (title: string) => {
+        let cash = money.filter((el)=> el.banknots === title)
+        if (cash) {
+            return cash
+        }
+
     }
 
     return (
         <div className={"App"}>
-            <Button title={'Dollars'}/>
+            <Button title={'Dollars'} callBack={()=>{showMeHandler}}/>
             <Button title={'RUBLS'}/>
 
         </div>

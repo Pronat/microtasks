@@ -6,9 +6,12 @@ type ButtonType = {
 }
 
 export const Button = (props: ButtonType) => {
+    const onclickHandler = () => {
+        props.callBack()
+    }
       return (
           <div>
-              <button>{`show me ${props.title}`}</button>
+              <button onClick={onclickHandler}>{`show me ${props.title}`}</button>
           </div>
       )
 
