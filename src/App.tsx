@@ -15,17 +15,19 @@ function App() {
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
 
+    const [newMoney, setNewMoney] = useState(money)
+
     const showMeHandler = (title: string) => {
         if (title === 'all') {
-           setMoney(money)
+            setNewMoney(money)
         }
         if (title === 'Dollars') {
-            money.filter((el) => el.banknots === 'Dollars')
-            setMoney(money)
+            let newMoney = money.filter((el) => el.banknots === 'Dollars')
+            setNewMoney(newMoney)
         }
-        if (title === 'Dollars') {
-            money.filter((el) => el.banknots === 'RUBLS')
-            setMoney(money)
+        if (title === 'RUBLS') {
+            let newMoney = money.filter((el) => el.banknots === 'RUBLS')
+            setNewMoney(newMoney)
 
         }
     }
@@ -35,7 +37,7 @@ function App() {
             <div className={"App"}>
                 <div>
                     {
-                        money.map((el, index) => {
+                        newMoney.map((el, index) => {
                             return (
                                 <div key={index}>
                                     <span>{el.value} </span>
