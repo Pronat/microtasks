@@ -1,12 +1,22 @@
 import React from 'react';
-import {Map} from "./components/Map";
+import {log} from "util";
+
 
 function App() {
+    // const HelloKolya = (event: MouseEvent<HTMLButtonElement>) => {
+    //     console.log('Hello my friend Kolya')
+    // }
+    const HelloKolya = (name: string) => {
+        console.log((name))
+    }
 
     return (
         <div className={"App"}>
-      <Map />
-
+            <button onClick={() => {
+                console.log('Hello')
+            }}>click
+            </button>
+            <button onClick={HelloKolya}>button2</button>
         </div>
     );
 }
