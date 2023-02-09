@@ -11,12 +11,10 @@ const topCars = [
 ]
 
 
-const Map = (props: CarsType) => {
+export const Map = () => {
     return (
         <div>
-            {props.manufacturer}
+            {topCars.map(el => <li key={el.model}>{el.manufacturer}</li>)}
         </div>
     );
 };
-
-export default Map;
