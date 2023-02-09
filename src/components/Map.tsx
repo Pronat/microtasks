@@ -14,7 +14,15 @@ const topCars = [
 export const Map = () => {
     return (
         <div>
-            {topCars.map(el => <li key={el.model}>{el.manufacturer}</li>)}
+            <table>
+            <tr>
+            {topCars.map((el,index) => <td key={index}>
+                <span> manufactored: {el.manufacturer},</span>
+                <span> model: {el.model}
+                </span>
+            </td>)}
+            </tr>
+            </table>
         </div>
     );
 };
