@@ -4,13 +4,19 @@ import {Button} from "./components/Button";
 
 
 function App() {
+    const onclickHandler = () => {
+        console.log(`Hello my friend Vasya`)
+    }
+    const whatTimeHandler = () => {
+        console.log('Date')
+    }
 
 
 
     return (
         <div className={"App"}>
-           <Button title={1}/>
-           <Button title={2}/>
+           <Button title={'1'} callBack={onclickHandler} />
+           <Button title={'2'} callBack={whatTimeHandler}/>
         </div>
     );
 }
