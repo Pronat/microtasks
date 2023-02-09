@@ -15,22 +15,19 @@ function App() {
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
 
-    const [newMoney, setNewMoney] = useState(money)
+
+    const [filter, setFilter] = useState('all')
+    let newMoney = money
+    if (filter === 'Dollars') {
+        newMoney = money.filter((el) => el.banknots === 'Dollars')
+    }
+    if (filter === 'RUBLS') {
+        newMoney = money.filter((el) => el.banknots === 'RUBLS')
+    }
 
     const showMeHandler = (title: string) => {
-        if (title === 'all') {
-            setNewMoney(money)
+        setFilter(title)
         }
-        if (title === 'Dollars') {
-            let newMoney = money.filter((el) => el.banknots === 'Dollars')
-            setNewMoney(newMoney)
-        }
-        if (title === 'RUBLS') {
-            let newMoney = money.filter((el) => el.banknots === 'RUBLS')
-            setNewMoney(newMoney)
-
-        }
-    }
 
 
         return (
