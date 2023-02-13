@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import {FullInput} from "./components/FullInput";
 
 
 function App() {
 
-    let [message, setMessage] = useState([
+   let [message, setMessage] = useState([
         {message: 'message1'},
         {message: 'message2'},
         {message: 'message3'},
@@ -11,10 +12,12 @@ function App() {
 
     return (
         <div>
-            <div>
-                <input/>
-                <button>+</button>
-            </div>
+            {/*<div>*/}
+            {/*    <input/>*/}
+            {/*    <button>+</button>*/}
+            {/*</div>*/}
+
+            <FullInput />
             {
                 message.map((el, index) => <li key={index} style={{marginLeft: '20px'}}>{el.message}</li>)
             }
