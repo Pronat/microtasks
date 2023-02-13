@@ -10,6 +10,10 @@ function App() {
         {message: 'message3'},
     ])
 
+    const setNewMessage = (title: string) => {
+        setMessage(`message: ${title}`)
+    }
+
     return (
         <div>
             {/*<div>*/}
@@ -17,7 +21,7 @@ function App() {
             {/*    <button>+</button>*/}
             {/*</div>*/}
 
-            <FullInput />
+            <FullInput setNewMessage={setNewMessage}/>
             {
                 message.map((el, index) => <li key={index} style={{marginLeft: '20px'}}>{el.message}</li>)
             }
