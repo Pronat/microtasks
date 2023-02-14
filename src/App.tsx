@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FullInput} from "./components/FullInput";
+
 
 
 function App() {
@@ -10,22 +10,9 @@ function App() {
         {message: 'message3'},
     ])
 
-    const setNewMessage = (title: string) => {
-       let newMessage = {message: title}
-        setMessage([...message,{message: title}])
-    }
-
     return (
         <div>
-            {/*<div>*/}
-            {/*    <input/>*/}
-            {/*    <button>+</button>*/}
-            {/*</div>*/}
 
-            <FullInput setNewMessage={setNewMessage}/>
-            {
-                message.map((el, index) => <li key={index} style={{marginLeft: '20px'}}>{el.message}</li>)
-            }
         </div>
     )
 }
