@@ -33,8 +33,8 @@ function App() {
             }
             {/*<FullInput addMessage={addMessage} />*/}
             <div style={{marginLeft: "20px"}}>
-                <Input setTitle={setTitle}/>
-                <Button title={title} name={'+'} CallBack={addNewMessage}/>
+                <Input setTitle={setTitle} title={title}/>
+                <Button title={title} name={'+'} CallBack={addNewMessage} setTitle={setTitle}/>
             </div>
 
         </div>

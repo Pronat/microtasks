@@ -1,6 +1,7 @@
 import React, {Dispatch, SetStateAction} from 'react';
 
 type InputPropsType = {
+    title: string
     setTitle: Dispatch<SetStateAction<string>>
 }
 export const Input = (props: InputPropsType) => {
@@ -9,7 +10,7 @@ export const Input = (props: InputPropsType) => {
     }
     return (
 
-            <input onChange={onChangeHandler}/>
+            <input value={props.title} onChange={onChangeHandler}/>
 
     );
 };
