@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 
 type FullInputType = {
-    addMessage: () => void
+    addMessage: (text: string) => void
 }
 
 export const FullInput = (props: FullInputType) => {
     let [newMessage, setNewMessage] = useState('')
     const onClickHandeler = () => {
-
+        props.addMessage(newMessage)
+        setNewMessage('')
     }
     const onChangeHandeler = (e: React.ChangeEvent<HTMLInputElement>) => {
        setNewMessage(e.currentTarget.value)
@@ -15,8 +16,8 @@ export const FullInput = (props: FullInputType) => {
     }
     return (
         <div>
-            <input onChange={onChangeHandeler} style={{marginLeft: "20px"}}/>
-            <button onClick={()=>{}}>add Message</button>
+            <input value={newMessage} onChange={onChangeHandeler} style={{marginLeft: "20px"}}/>
+            <button onClick={onClickHandeler}>add Message</button>
         </div>
 
     )
