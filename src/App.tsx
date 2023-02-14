@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {FullInput} from "./components/FullInput";
 
 
 
@@ -12,7 +13,14 @@ function App() {
 
     return (
         <div>
-
+            {
+                message.map((el, index)=> {
+                    return (
+                        <li key={index} style={{marginLeft: "20px"}}>{el.message}</li>
+                    )
+                } )
+            }
+            <FullInput />
         </div>
     )
 }
