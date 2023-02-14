@@ -11,6 +11,10 @@ function App() {
         {message: 'message3'},
     ])
 
+    const addMessage = (text: string) => {
+       setMessage([{message: text},...message])
+    }
+
     return (
         <div>
             {
@@ -20,7 +24,7 @@ function App() {
                     )
                 } )
             }
-            <FullInput />
+            <FullInput addMessage={addMessage} />
         </div>
     )
 }
