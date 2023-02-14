@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {FullInput} from "./components/FullInput";
-import Input from "./components/Input";
-import Button from "./components/Button";
+import {Input} from "./components/Input";
+import {Button} from "./components/Button";
 
 
 
@@ -26,9 +25,12 @@ function App() {
                     )
                 } )
             }
-            <FullInput addMessage={addMessage} />
-            <Input />
-            <Button />
+            {/*<FullInput addMessage={addMessage} />*/}
+            <div style={{marginLeft: "20px"}}>
+                <Input />
+                <Button name={} CallBack={}/>
+            </div>
+
         </div>
     )
 }
