@@ -14,13 +14,22 @@ function App() {
     let [title, setTitle] = useState('')
     const getNewMessage = () => {
         setMessage([{message: title}, ...message])
+        setTitle('')
     }
 
     return (
-        <div style={{margin: "20px"}}>
-            <Input setTitle={setTitle}/>
-            <Button name={'add message'} callBack={getNewMessage}/>
+        <div  style={{margin: "20px"}}>
+            <div>
+                <Input setTitle={setTitle} title={title}/>
+                <Button name={'add message'} callBack={getNewMessage}/>
+            </div>
+            <div>
+                {
+                    message.map((el, index) => <li key={index}>{el.message}</li>)
+                }
+            </div>
         </div>
+
     )
 }
 
