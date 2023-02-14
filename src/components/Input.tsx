@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {Dispatch, SetStateAction} from 'react';
 
-export const Input = () => {
+type InputPropsType = {
+    setTitle: Dispatch<SetStateAction<string>>
+}
+export const Input = (props: InputPropsType) => {
+    let onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        props.setTitle(e.currentTarget.value)
+    }
     return (
 
-            <input/>
+            <input onChange={onChangeHandler}/>
 
     );
 };

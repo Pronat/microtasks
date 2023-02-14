@@ -9,6 +9,6 @@ export const Button = (props: ButtonPropsType) => {
         props.CallBack()
     }
     return (
-            <button onClick={ButtonHandler}>+</button>
+            <button onClick={ButtonHandler}>{props.name}</button>
     );
 };

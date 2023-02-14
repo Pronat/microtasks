@@ -16,6 +16,8 @@ function App() {
        setMessage([{message: text},...message])
     }
 
+    let [title, setTitle] = useState('')
+
     return (
         <div>
             {
@@ -27,8 +29,8 @@ function App() {
             }
             {/*<FullInput addMessage={addMessage} />*/}
             <div style={{marginLeft: "20px"}}>
-                <Input />
-                <Button name={} CallBack={}/>
+                <Input setTitle={setTitle}/>
+                <Button name={'+'} CallBack={()=>{}}/>
             </div>
 
         </div>
