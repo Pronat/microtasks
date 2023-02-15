@@ -22,9 +22,16 @@ let defaultMoney: Array<MoneyType> = [  // типизируем
 
 // типизируем на входе и выходе
 export const moneyFilter = (money: MoneyType, filter: BanknotsType): any => {
-
-
-    //если пришел filter со значением 'All', то возвращаем все банкноты
+    if (filter === "All") {
+        return defaultMoney
+    }
+     if (filter === "RUBLS") {
+        return defaultMoney.filter((el)=>el.banknotes === "RUBLS" )
+    }
+    if (filter === "Dollars") {
+        return defaultMoney.filter((el)=>el.banknotes === "Dollars" )
+    }
+        //если пришел filter со значением 'All', то возвращаем все банкноты
     //return money.filter... ну да, придется фильтровать
 }
 
