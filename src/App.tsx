@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import './App.css';
 import {Country} from "./Country";
 
-export type BanknotsType = '' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
+export type BanknotsType = 'Dollars' | 'RUBLS' | 'All' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
 export type MoneyType = {
     banknotes: BanknotsType
-    value: any// не ленимся, убираем заглушку, и пишем правильный тип)
-    number: any// ложку за Димыча, за...
+    value: number// не ленимся, убираем заглушку, и пишем правильный тип)
+    number: string// ложку за Димыча, за...
 }
 
-let defaultMoney: any = [  // типизируем
+let defaultMoney: Array<MoneyType> = [  // типизируем
     {banknotes: 'Dollars', value: 100, number: ' a1234567890'},
     {banknotes: 'Dollars', value: 50, number: ' z1234567890'},
     {banknotes: 'RUBLS', value: 100, number: ' w1234567890'},
