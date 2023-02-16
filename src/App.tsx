@@ -21,7 +21,7 @@ let defaultMoney: Array<MoneyType> = [  // типизируем
 ]
 
 // типизируем на входе и выходе
-export const moneyFilter = (money: MoneyType, filter: BanknotsType): any => {
+export const moneyFilter = (money: MoneyType[], filter: BanknotsType) => {
     if (filter === "All") {
         return defaultMoney
     }
@@ -42,7 +42,7 @@ function App() {
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
     // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
-    const filteredMoney = moneyFilter(грошы, фильтръ)
+    const filteredMoney = moneyFilter(money, filterValue)
     return (
         <div className="App">
             <Country
