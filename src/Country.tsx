@@ -3,8 +3,8 @@ import {City} from "./City";
 import {BanknotsType, MoneyType} from "./App";
 
 type CountryPropsType = {
-    data: MoneyType[]
-    setFilterValue: (title: string) => void // давайте подумаем, setFilter -это гоузчик, у которого всегда в руках товар
+    data: Array<MoneyType>
+    setFilterValue: (filterValue: BanknotsType) => void // давайте подумаем, setFilter -это гоузчик, у которого всегда в руках товар
   }
 
 export const Country = (props: CountryPropsType) => {
